@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 import pymysql
-from original import LexRank
+from kwchatbot import kwchatbot
 import operator
 import random
 import time
@@ -29,19 +29,19 @@ def chat(question) :
         stri = ''.join(row)
         question += ' ' + stri
     
-    #original.py 파일의 LexRank 객체 생성
-    lexrank = LexRank()
-    lexrank.summarize(question)   #LexRank class의 summarize함수 호출
+    #kwchatbot.py 파일의 kwchatbot 객체 생성
+    chatbot = kwchatbot()
+    chatbot.summarize(question)   #chatbot class의 summarize함수 호출
     
     #dictionary 객체를 이용한 heap 생성
     heap = {0:0}
     
     #모든 sentence에 대해 반복
-    for i in range(lexrank.num_sentences) :
+    for i in range(chatbot.num_sentences) :
         #만약 해당 sentence의 tf-idf 유사도 값이 0이면
-        if(lexrank.matrix[i,0] == 0) :
+        if(chatbot.matrix[i,0] == 0) :
             continue        #heap에 추가하지 않음
-        heap[i] = lexrank.matrix[i,0]   #tf-idf값이 0이 아니면 heap에 추가 (key = sentence index, value = tf-dif 유사도)
+        heap[i] = chatbot.matrix[i,0]   #tf-idf값이 0이 아니면 heap에 추가 (key = sentence index, value = tf-dif 유사도)
     
     #만약 자기 자신을 제외하고 유사도가 모두 0인 경우
     if len(heap) < 2 :
@@ -63,7 +63,7 @@ def chat(question) :
     
     print("\ttf-idf 값 : ", max_sim[1])
     
-    print("\t질문 토큰 : ", lexrank.sentences[0].tokens)
+    print("\t질문 토큰 : ", chatbot.sentences[0].tokens)
     
     #가장 유사도가 높은 문장에 대한 answer index값을 얻어옴
     sql = "select a from qna where q = %d" %question_index
@@ -84,10 +84,8 @@ def chat(question) :
     
     #데이터베이스와 연결 종료
     conn.close()
-    #답변 return
+    #답변 return아
     return answer[0]
-
-
 
 if __name__ == '__main__' :
     user = input("질문 : ")
