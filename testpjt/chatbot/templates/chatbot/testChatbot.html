@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Chatbot Test</title>
+ 	</head>
+  	<body>
+  	<h1 style="margin-left:200px"> 한국어 챗봇 </h1>
+	    <form action="/chatbot/post" method = "post" onsubmit="return onWriteSubmit()">
+		{%csrf_token%}
+		<div style="margin-top:50px; text-align:center;">
+			<p><예시><br>
+			뭐해?<br>노래 부르는 거 좋아해?<br>오늘 날씨 좋다.</p>
+			<font size=5>
+				<table align="center" style="margin-top:100px">
+				<tr>
+					<td><b>질문: </b></td><td><input type="text" name="question" id="question" size = 50 style="height:25px; font-size:15pt;" required/></td>
+				</tr>
+				<tr>
+					<td><b>답변: </b></td>
+				</tr>
+				</table>
+			</font>
+		 {{form.as_p}}
+			</br><button type="submit"><font size=4>입력</font></button>
+			
+			</br></br></br></br></br></br>	
+			<p><b>한국어 챗봇</b></p>
+			<p><b>생생하조</b></p>
+			<p>KwangWoon Univ. </p>
+
+		</div>					
+	    </form>
+
+	    <script>
+	    	function onWriteSubmit()
+	    	{
+	    		if ( $("#question").val() == "" )
+	    		{
+	    			var message = "질문을 입력해 주세요";
+	    			$("#question").val("");
+	    			$("#question").focus();
+	    			alert(message);
+	    			return false;
+	    		}
+	    	}
+	    </script>
+  
+  	</body>
+</html>

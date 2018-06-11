@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Chatbot Test</title>
+ 	</head>
+  	<body>
+	        <form>
+		{%csrf_token%}
+		<div style="margin-top:250px; text-align:center;">
+		<font size=5>
+			<table align="center">
+			<tr>
+	  		    <td><b>질문: </b></td><td>{{  question }}</td>
+	  		</tr>
+	  		<tr>
+			    <td><b>답변: </b></td><td>{{  answer  }}</td>
+			</tr>
+			</table>
+		  
+		</font>
+			<a href='/chatbot'>다시 질문하기</a>
+			</br></br></br></br></br></br>	
+			<p><b>한국어 챗봇</b></p>
+			<p><b>생생하조</b></p>
+			<p>KwangWoon Univ. </p>
+		</div>					
+	        </form>
+  	</body>
+</html>
