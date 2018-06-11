@@ -7,8 +7,7 @@ from .models import Qna
 
 import sys
 sys.path.insert(0, r'..')
-import original
-from original import LexRank
+from kwchatbot import kwchatbot
 import chat
 
 # Create your views here.
