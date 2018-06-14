@@ -24,6 +24,9 @@
 ## 사용법
 1. chatbot.py 에서 
 ''' {.python}
+def chatbot() :
+  print('hello!')
+
 conn = pymysql.connect(host = 'localhost', user='root', passwd='', db='chatbot', charset='utf8')
 '''  
 passwd 부분에 **chatbot** database 의 비밀번호를 입력해 주어야 합니다.
