@@ -17,5 +17,7 @@ pip install lexrankr
 pip install pymysql
 '''
 
+
+
 ## 사용법
 cmd 창에서 
