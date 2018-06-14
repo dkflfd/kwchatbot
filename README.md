@@ -29,4 +29,4 @@ testpjt 가 있는 폴더에서 cmd를 실행시키고 'python manage.py runserv
 
 
 ## Web 화면
-![Alt text](C:\Users\SeoNari\Desktop\Capture_컴언\html.png)
+![html](https://user-images.githubusercontent.com/37467841/41412048-be117d80-7019-11e8-84d4-cc3bedfd8787.PNG)
