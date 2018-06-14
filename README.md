@@ -16,7 +16,7 @@
 
 
 ## 설치
-'''python
+'''{.python}
 pip install lexrankr
 pip install pymysql
 '''
