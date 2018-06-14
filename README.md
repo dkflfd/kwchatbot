@@ -23,7 +23,7 @@
 
 ## 사용법
 1. chatbot.py 에서 
-''' {.python}
+'''{.python}
 def chatbot() :
   print('hello!')
 
