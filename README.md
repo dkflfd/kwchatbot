@@ -22,8 +22,10 @@
 
 
 ## 사용법
-1. chatbot.py 에서 '''{.python}
-conn = pymysql.connect(host = 'localhost', user='root', passwd='', db='chatbot', charset='utf8')'''  
+1. chatbot.py 에서 
+''' {.python}
+conn = pymysql.connect(host = 'localhost', user='root', passwd='', db='chatbot', charset='utf8')
+'''  
 passwd 부분에 **chatbot** database 의 비밀번호를 입력해 주어야 합니다.
 2. testpjt 가 있는 폴더에서 cmd를 실행시키고 'python manage.py runserver'를 입력  
 3. <http://127.0.0.1:8000/chatbot/> 에 접속  
