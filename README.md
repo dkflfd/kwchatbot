@@ -22,10 +22,10 @@
 
 
 ## 사용법
-testpjt 가 있는 폴더에서 cmd를 실행시키고 'python manage.py runserver'를 입력
-<http://127.0.0.1:8000/chatbot/> 에 접속
-질문 입력창에 질문 입력
-엔터 혹은 입력 버튼 클릭
+1. testpjt 가 있는 폴더에서 cmd를 실행시키고 'python manage.py runserver'를 입력  
+2. <http://127.0.0.1:8000/chatbot/> 에 접속  
+3. 질문 입력창에 질문 입력  
+4. 엔터 혹은 입력 버튼 클릭  
 
 
 ## Web 화면
