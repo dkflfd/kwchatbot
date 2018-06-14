@@ -11,6 +11,10 @@
 
 2015722078 김소희
 
+## 시연 동영상
+<https://www.youtube.com/watch?v=Omm55yvTkek&feature=youtu.be/>
+
+
 ## 설치
 '''python
 pip install lexrankr
