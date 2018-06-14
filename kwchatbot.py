@@ -119,7 +119,7 @@ class kwchatbot(object):
             self.vectorizer = DictVectorizer()
             self.uniform_sim = self._sim_cosine
         else:
-            raise LexRankError("available similarity function is: cosine")
+            raise kwchatbotError("available similarity function is: cosine")
         self.sim = lambda sentence1, sentence2: self.uniform_sim(sentence1, sentence2)
         self.factory = SentenceFactory(tagger=tagger, useful_tags=useful_tags, delimiters=delimiters, stopwords=stopwords, **kwargs)
         self.max_dictionary_size = max_dictionary_size
