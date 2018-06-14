@@ -16,7 +16,8 @@
 
 
 ## 설치
->pip install lexrankr  pip install pymysql
+>pip install lexrankr
+>pip install pymysql
 
 
 
